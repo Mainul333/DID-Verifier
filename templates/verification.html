@@ -1,0 +1,70 @@
+
+{% extends "layout.html" %}
+{% block content %}
+
+				
+                <div id="container_demo" >
+				
+                    
+
+
+
+       
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                                <h1>DID Verification</h1> 
+<div class="file-upload">
+    <form action="upload_file" method="POST" enctype=multipart/form-data>
+  <button class="file-upload-btn"  type="button" onclick="$('.file-upload-input').trigger( 'click' )">Add Document</button>
+
+  <div class="image-upload-wrap">
+    <input class="file-upload-input" type='file' name='file' onchange="readURL(this);" />
+    <div class="drag-text">
+      <h3>Drag and drop a DID document in json format</h3>
+    </div>
+  </div>
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="#" alt="your image" />
+    <div class="image-title-wrap">
+      <button type="button" onclick="removeUpload()" class="remove-image">Remove <span class="image-title">Uploaded Document</span></button>
+    </div>
+  </div>
+  <br>
+   <p class="login button" style="text-align: center;"> 
+
+    <input  class="login button" style="background:red"type="submit" value="Verify">
+	</p>
+   </form>
+</div>
+		<center>        
+        {% if result.result == 1 and filepath=='True' %}
+        <div class="container">
+		<p style="color:green">Valid DID</p><br>
+	    <div><img src="static/uploads/True.png" width="10%" /></div>
+        </div>
+        {% elif result.result == 1 and filepath=="False" %}
+        <div class="container">
+		<p style="color:red">Invalid DID</p><br>
+	    <div ><img src="static/uploads/False.png" width="10%" /></div>
+        </div>
+
+        {% elif result.result == 1%}
+        <div class="container">
+		<p style="color:red">This is not a DID document</p><br>
+         
+        </div>		
+  		{% elif result.result == 0%}
+		<p style="color:red">{{result.error}}</p>
+  		{% endif %}
+		</center>
+
+                        </div>
+
+
+						
+                    </div>
+
+
+    </div>  
+
+{% endblock %}

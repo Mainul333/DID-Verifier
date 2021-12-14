@@ -1,0 +1,27 @@
+{
+ "@context": "https://www.w3id.org/credentials/v1", 
+ "id": "did:example:2ec21ebfeb1f712ebc",
+ "type": ["verifiableCredential", "ePortfolioCredential"],
+ "issuer":"did:example:ebfeb1bc6f1c276e12ec21",
+ "issuanceDate":"2021-08-18T14:15:26Z",
+ "expiringDate":"2023-08-18T14:15:26Z",
+ "claim": {
+    "id": "did:example:2ec21ebfeb1f712ebc",
+    "type": "ePortfolioVerifiableCredential",
+    "title": "ePortfolio Management",
+    "portfolioURL":"https://github.com/myportfolio",
+    "created":"2021-08-18T14:15:26Z",
+    "creator": [{ "id": "did:example:12345abcde" }],
+	"reviewer": [{ "id": "did:example:f712ebc6f1c276e12ec21bc" }],
+    "evaluator": [{ "id": "did:example:ebfeb1bc6f1c276e12ec21" }],
+    "score":"95"
+ },
+ "proof": {
+    "type":"Ed25519Signature2020",
+    "created": "2021-08-18T14:12:19Z",
+    "creator":"did:example:ebfeb1bc6f1c276e12ec21",
+    "proofPurpose": "ePortfolioCredentialVerification",
+    "verificationMethod": "https://example.edu/issuers/keys/#1",
+    "signitureValue": " sITJX1CxPCT8yAV...PAYuNzVBAh4vGHSrQyHUdBBPM"
+  }
+}
