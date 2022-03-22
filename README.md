@@ -1,6 +1,6 @@
 # DID Verifier
  Decentralized Identifier Verification
 # Contributors
-Main program@Mainul333
+Main Program@Mainul333
 
 DID Document@mlecjm
