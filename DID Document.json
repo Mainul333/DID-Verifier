@@ -1,0 +1,37 @@
+{
+ "@context": "https://www.w3.org/ns/did/v1",
+ "id": "did:example:12345abcde",
+ "type": ["DecentralizedIdentifier","UserProfileIdentifier"],
+ "issuer":"did:example:ebfeb1bc6f1c276e12ec21",
+ "issuanceDate":"2021-09-18T14:15:26Z",
+ "publicKey": [{
+    "id": "did:example:12345abcde#keys-1",
+    "type": "Ed25519VerificationKey2020",
+    "publicKeyMultibase":"QjztzfDAm26/l04BvnSyxePee2kmOVC+flqF1zK7uQM="
+ }],
+ "claim":{
+    "id": "did:example:202108abcdefg",
+    "fullName": "Merlec M.",
+    "email": "abc@exampl.com",
+    "profileURL": ["https://myprofile.org", 
+                   "https://linkedin.com/myprofile", 
+                   "https://www.saramin.co.kr/myprofile"],
+      "studentOf": {
+      "id": "did:example:kus012345abcdefg",
+      "institution": [{
+        "name": "Korea University",
+        "department": " Department of Computer Science and Eng."
+      }]
+    }
+  },  
+ "authentication": {
+    "type": "Ed25519VerificationKey2020",
+    "publicKey" : "5hcZuqdn7qbXgfpExPmqYGuUaTPYTwcJgR19YA3VWgB",
+    "signatureValue": "4xRJc5oMwKiVXZAeUTkuVJFuC9hy5cDpJeujmbaZpYDFJw1vFwAGoh4mDyoKKMGsxmG4YwBccJpC82AfsJBdabBD"
+ },
+ "proof":{
+    "type":"Ed25519Signature2020",
+    "verificationMethod": "did:example/issuer#9GjZY6FhBjVCXLgVaBcyAbcJ7dhu31XaxKUrvoM9A7C7",
+    "signatureValue": "2G3YnyHsvgKBtm8Q2mCsNEi3j1tER4R4aC67PckWpWx5NwR9nVsupmcVb6nZfmtJsy6iLpfunRTnDkwkP3V1SWY6"
+  }
+}
