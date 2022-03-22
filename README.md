@@ -1,5 +1,5 @@
 # DID Verifier
  Decentralized Identifier Verification
-#Contributer
+# Contrinbutors
 Main program@Mainul333
 DID Document@mlecjm
